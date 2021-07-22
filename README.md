@@ -1,4 +1,4 @@
-# In_Isai_Paadal-Extractor
+# Tamil Song & Lyrics Extractor
 Download Tamil Songs with Lyrics or Get lyrics for any particular Tamil song.
 
 **Usage:**
