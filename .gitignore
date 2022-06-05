@@ -4,3 +4,4 @@ src/*
 exp/*
 sample/*
 __pycache__
+pretrained_models/*
