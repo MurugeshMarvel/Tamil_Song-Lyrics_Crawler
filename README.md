@@ -3,4 +3,6 @@ Download Tamil Songs with Lyrics or Get lyrics for any particular Tamil song.
 
 **Usage:**
 
-`python main.py --song <song_name> --save_dir <path_to_save>`
+Syntax : `Python <main.py> --songs <Tamil Songs CSV file which should contain "Song" Column> --save_dir <Path_to_save>`
+
+> Eg: `python main.py --songs spb_tam_songs.csv --save_dir Sample`

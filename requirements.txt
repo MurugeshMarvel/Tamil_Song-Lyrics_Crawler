@@ -1,0 +1,6 @@
+googlesearch-python == 1.0.1
+youtube-search-python
+youtube-dl
+beautifulsoup4
+pandas
+numpy
