@@ -1,3 +1,7 @@
+""" __Execution command__
+python main.py --songs spb_tam_songs.csv --save_dir Sample
+"""
+
 import os
 import argparse
 import sys
@@ -22,17 +26,17 @@ def main(song_df:pd.DataFrame,
     song_names = df['Song'].tolist()
     
     if not os.path.isdir(save_dir):
-        lyrics_save_dir = os.path.join(save_dir, 'Lyrics')
-        check_dir(lyrics_save_dir)
+        # lyrics_save_dir = os.path.join(save_dir, 'Lyrics')
+        # check_dir(lyrics_save_dir)
         song_save_dir = os.path.join(save_dir, 'Songs')
         check_dir(song_save_dir)
     else:
-        lyrics_save_dir = f'{save_dir}\\Lyrics'
+        # lyrics_save_dir = f'{save_dir}\\Lyrics'
         song_save_dir = f'{save_dir}\\Songs'
     for song in song_names:
         if only_lyrics == False:
-            lyrics_fetcher = GetLyrics(save_dir=lyrics_save_dir)
-            lyrics_fetcher.get_lyrics(song)
+            # lyrics_fetcher = GetLyrics(save_dir=lyrics_save_dir)
+            # lyrics_fetcher.get_lyrics(song)
             song_downloader = GetSongs(song_save_dir)
             song_downloader.download_songs(song)
 
