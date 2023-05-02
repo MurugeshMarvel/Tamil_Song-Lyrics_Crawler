@@ -25,7 +25,7 @@ class GetSongs(object):
     def _construct_cli_cmnd(self,
                             vid_link: str,
                             song_name: str,
-                            out_format: str = 'mp3',
+                            out_format: str = 'wav',
                             save_name: str = None,
                             verbose: bool = False,
                             ):
@@ -36,7 +36,7 @@ class GetSongs(object):
 
         base_cmnd += f' --audio-format {out_format} '
         base_cmnd += vid_link
-        if not os.path.isfile(f'{self.save_dir}\{song_name}.mp3'):
+        if not os.path.isfile(f'{self.save_dir}\{song_name}.wav'):
             if save_name:
                 save_path = os.path.join(self.save_dir, save_name)
                 base_cmnd += f" -o '{save_path}/.%(ext)s'"
@@ -58,7 +58,7 @@ class GetSongs(object):
             youtube_dl_cmnd = self._construct_cli_cmnd(vid_link=vid_link, song_name=song_name)
             if youtube_dl_cmnd[0]:
                 youtube_dl_cmnd = youtube_dl_cmnd[1]
-                # print(youtube_dl_cmnd)
+                print(youtube_dl_cmnd)
                 os.system(youtube_dl_cmnd)
                 print(f"## Downloaded Song - {song_name}")
             else:
